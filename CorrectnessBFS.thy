@@ -31,15 +31,15 @@ theorem
   f := {a};
   WHILE f ~= {}
   INV {
-    s Un r^* `` f = r^* `` {a} &
-    r `` s <= s Un f &
+    s Un R^* `` f = R^* `` {a} &
+    R `` s <= s Un f &
     a : s Un f
   }
   DO
     s := s Un f;
-    f := r `` f - s
+    f := R `` f - s
   OD
-  {s = r^* `` {a}}"
+  {s = R^* `` {a}}"
 
 apply(vcg)
 apply(auto intro: transitive_closure_trans)
